@@ -58,3 +58,4 @@ NOTE:
 undefined is  type in JS so it will give undefined as its datatype.
 null is an object. It is not a special datatype. It is also called error in language.
 */
+
