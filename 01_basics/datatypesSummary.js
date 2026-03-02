@@ -83,3 +83,72 @@ const myFunction = function(){
     console.log("Hello world")
 }
 console.table([actors, typeof actors, myObj, typeof myObj, myFunction, typeof myFunction])
+
+
+
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+//Stack memory is used where Premitive datatypes are used.
+//Heap memory is used where non-Primitive datatypes are used.
+//In stack m/m, we get copy of the variable.
+//In heap m/m, we get reference to that original value.
+
+let myGitHub = "AakritiSaxena32"
+//This will be stored in stack m/m
+
+let anotherName = myGitHub
+console.log(anotherName) // AakritiSaxena32
+
+anotherName = "ChaiAurCode"
+console.log(anotherName) //ChaiAurCode
+console.log(myGitHub) //AakritiSaxena32
+//Here the value of myGitHub is not changed because we will be provided copy of myGitHub not the original value
+
+let user1 = {
+    email:"user@google.com",
+    upi: "user@ybl"
+}
+let user2 = user1
+
+user2.email = "abc@google.com"
+console.log(user1.email, user2.email)
+//both will print abc@google.com
+//beacuse beth the variables are provided same reference in heap
+
+
+/*
+🟢 1. Stack Memory (Primitive Data Types)
+Primitive types:
+string, number, boolean, null, undefined, symbol, bigint
+Example from your code:
+👉 What happens?
+myGitHub stores "AakritiSaxena32" in stack memory.
+When you write anotherName = myGitHub
+→ A copy of the value is made.
+Now both are separate.
+Only anotherName changes.
+myGitHub stays same.
+🧠 Simple idea:
+Stack = photocopy 📄
+You change your copy → original stays same.
+*/
+
+/*
+🔵 2. Heap Memory (Non-Primitive Data Types)
+Non-primitive types:
+object, array, function
+Example from your code:
+👉 What happens?
+Object is stored in heap memory.
+user1 stores the address (reference) of that object.
+When you write user2 = user1
+→ You are copying the address, not the object.
+So both user1 and user2 point to the same object.
+You changed the object in heap.
+Since both point to same object,
+both show updated value.
+🧠 Simple idea:
+Heap = Google Drive link 🔗
+Both people have same link.
+If one edits the file → both see changes.
+*/
