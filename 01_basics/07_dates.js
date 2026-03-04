@@ -12,3 +12,10 @@ console.log(myDate.toLocaleTimeString())//6:38:05 AM
 
 //JavaScript Date objects represent a single moment in time in a platform-independent format. Date objects encapsulate an integral number that represents milliseconds since the midnight at the beginning of January 1, 1970, UTC
 
+let myCreatedDate = new Date(2023,0,23)
+console.log(myCreatedDate)//2023-01-23T00:00:00.000Z
+console.log(myCreatedDate.toString())//Mon Jan 23 2023 00:00:00 GMT+0000 (Coordinated Universal Time)
+console.log(myCreatedDate.toDateString())//Mon Jan 23 2023
+console.log(myCreatedDate.toTimeString())//00:00:00 GMT+0000 (Coordinated Universal Time)
+console.log(myCreatedDate.toLocaleString())//1/23/2023, 12:00:00 AM
+console.log(myCreatedDate.toDateString())//Mon Jan 23 2023
