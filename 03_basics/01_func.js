@@ -61,3 +61,40 @@ function login(username = "Elsa")
     return `${username} just logged in`
 }
 
+function calculateCartPrice(val1, val2, ...num1) //this is rest operator
+{
+    console.log(val1)//200
+    console.log(val2)//400
+    return num1
+}
+//The rest operator in JavaScript (denoted by three dots: ...) is used to gather the remaining elements of an iterable (like function arguments or an array) into a single Array variable.
+//When used in functions or destructuring, it must be the last item in the parameter/variable list, otherwise a SyntaxError is thrown.
+//The rest operator always results in a real Array instance, allowing you to use all standard array methods like map(), sort(), and pop()
+//It uses the same ... syntax as the spread operator, but their use cases determine which one it is.
+//The rest operator collects multiple individual items into a single array or object, which is the opposite of the spread operator, which expands an array or object into individual elements
+console.log(calculateCartPrice(200, 400, 500, 2000)) //[ 500, 2000 ]
+
+const user = {
+    username: "aakriti",
+    price : 999
+}
+function handleObj(anyObject)
+{
+    console.log(`Username is ${anyObject.username} and price is ${anyObject.price}`)
+
+}
+
+handleObj(user)
+handleObj({
+    username: "Fishu",
+    price: 1000000
+})
+//if certain element is not defined in the object it will be shown undefined if prices is there in obj, and we write price in function then will be undefined
+
+const arr = [200, 300, 400, 500]
+function returnArr(getArray)
+{
+    return getArray[1]
+}
+console.log(returnArr(arr))
+console.log(returnArr([1000,2000,3000,4000]))
