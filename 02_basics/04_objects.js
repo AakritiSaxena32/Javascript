@@ -74,10 +74,23 @@ const course = {
     courseInst : "Hitesh"
 }
 
-const {courseInst: inst} = course
-console.log(inst)
+//this the other syntax to write course.courseInst...instead of this we can write courseInst
+const {courseInst} = course
+console.log(courseInst)
 
-{
-    name: "Aakriti",
-    cn: "jz"
-}
+const {courseName: Cname} = course
+console.log(Cname)
+
+//this is called destructring of object
+
+//--------------------API Concept-----------------------
+//--------------------JSON------------------------------
+
+// {
+//     "name" : "hitesh",
+//     "coursename" : "JS",
+//     "price" : "free"
+// }
+
+//we get response from API  in the form of array or object
+//all API are in JSON (javascript object notation)
