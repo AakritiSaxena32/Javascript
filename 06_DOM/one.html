@@ -11,10 +11,47 @@
         }
     </style>
 </head>
-<body>
-    <div class="bg-black">
-        <h1 id = "title" class="heading">DOM Learning on Chai and Code</h1>
+<body class="bg-black">
+    <div>
+        <h1 id = "title" class="heading">DOM Learning on Chai and Code <span style = "display: none">test text</span></h1>
+        <h1>Lorem.</h1>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam optio eum distinctio pariatur harum repellat tenetur, sequi, obcaecati amet corporis placeat fugiat reprehenderit facere molestias a odit quam, vitae magnam?</h3>
+        <h2>Lorem ipsum dolor sit amet consectetur.</h2>
+        <h2>Lorem ipsum dolor sit, amet consectetur adipisicing.</h2>
         <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password" name="passwd" id="passwd">
+        <ul>
+            <li class = "listItem">one</li>
+            <li class = "listItem">two</li>
+            <li class = "listItem">three</li>
+            <li class = "listItem">four</li>
+        </ul>
     </div>
 </body>
 </html>
+
+<!--
+title.textContent
+'DOM Learning on Chai and Code test text'
+title.innerHTML
+'DOM Learning on Chai and Code <span style="display: none">test text</span>'
+title.innerText
+'DOM Learning on Chai and Code'
+-->
+
+<!--
+document.getElementById('title')
+document.getElementsByClassName('heading')
+document.querySelector('h2') // gives first h1 on page
+document.querySelector('.heading')//selects class
+document.querySelector('#title')//by id
+document.querySelector('input[type="password"]')
+document.querySelector('p:first-child')
+-->
+
+
+<!--
+NodeList---no map
+HTMLCollection---no forEach loop
+-->
