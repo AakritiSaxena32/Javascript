@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style = "background-color:black; color:white">
+    <script>
+        const div = document.createElement('div')
+        console.log(div)
+        div.className = "main"
+        div.id = "myId"
+        div.id = Math.round(Math.random()*10 + 1)
+        div.setAttribute("title", "generated title")
+        div.style.backgroundColor = "green"
+        div.style.padding = "12px"
+        //div.innerHTML = "Full Stack Web Development"
+        //We generally prefer to use setAttribute() beacause innerHTML first takes the value which is already present in it and then overwrites it.
+        //But in setAttribute it directly overwites the value, it doesn't take the value first and then overwrites it.
+        //So setAttribute saves one round trip time.
+        const addText = document.createTextNode("Full Stack Web Development")
+        div.appendChild(addText)
+        document.body.appendChild(div)
+    </script>
+</body>
+</html>
